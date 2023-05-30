@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      header {
+        border-style: groove;
+        background-color: #e6dcdc;
+      }
+      #aditya {
+        overflow: hidden;
+      }
+      #aditya {
+        float: right;
+      }
+      #aditya {
+        float: left;
+      }
+      .thakran {
+        text-decoration: none;
+        color: black;
+      }
+      main {
+        text-align: center;
+        border-style: groove;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 30px;
+        background-color: #e8f3f7;
+      }
+      .form-control {
+        text-align: left;
+        margin-bottom: 25px;
+      }
+      /* Styling form-control Label */
+      .form-control label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      /* Styling form-control input,
+        select, textarea */
+      .form-control input,
+      .form-control select,
+      .form-control textarea {
+        border: 1px solid #777;
+        border-radius: 2px;
+        font-family: inherit;
+        padding: 10px;
+        display: block;
+        width: 95%;
+      }
+      .form-control input[type="radio"],
+      .form-control input[type="checkbox"] {
+        display: inline-block;
+        width: auto;
+      }
+      #size {
+        padding-bottom: 10px;
+      }
+      .size2 {
+        width: 100px;
+      }
+      .size2:hover {
+        background-color: chartreuse;
+      }
+      
+        /* Existing styles */
+      
+        /* Media query for responsiveness */
+        @media screen and (max-width: 768px) {
+          header {
+            text-align: center;
+            background-color: darkgray;
+          }
+      
+          #ar {
+            float: none;
+            margin-top: 10px;
+          }
+      
+          #as {
+            float: none;
+          }
+      
+          main {
+            margin: 10px;
+          }
+      
+          .size2 {
+            width: 100%;
+          }}
+        
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div id="sac">
+          <div id="as">Survey form</div>
+          <div id="ar">
+            <a href="" class="thakran">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="" class="thakran">Login</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="" class="thakran">Sign up</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+     <form action="/FEEProjects.html">
+        <h1>Register here</h1>
+        <div class="form-control">
+          <label for="name" id="label-name"> Name </label>
+          <input
+          class="age-script"
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            required
+            maxlength="20"
+            minlength="4"
+          />
+          <br />
+          <label for="email" id="label-email"> Email </label>
+          <input
+         
+            type="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+            
+          />
+          <br />
+          <label for="age" id="label-age"> Age </label>
+          <input  class="age-script" type="number" id="age" placeholder="Enter your age" required />
+          <br />
+          <label for="age" id="label-age"> Contact no </label>
+          <input id="contact" type="number" id="age" placeholder="Enter your contact number" />
+        </div>
+        <div id="size">
+          <button type="submit" value="Continue" class="size2" onclick="check_age()">
+            Take Survey
+          </button>
+          &nbsp;&nbsp;
+          <input type="reset" class="size2" />
+        </div>
+     </form>
+    </main>
+    <script>
+       function check_age() {
+            var nameInput = document.getElementById('name');
+            var emailInput = document.getElementById('email');
+            var ageInput = document.getElementById('age');
+            var contactInput=document.getElementById('contact');
+            
+            var name = nameInput.value;
+            var email = emailInput.value;
+            var age = ageInput.value;
+            var contact=contactInput.value;
+    
+            if (name === '') {
+              alert('Please enter your name.');
+              return;
+            }
+            if (email === '') {
+              alert('Please enter your email.');
+              return;
+            }
+            if (age === '') {
+              alert('Please enter your age.');
+              return;
+            }
+            if (contact=== '') {
+                alert('Please enter your contact no.');
+                return;
+              }
+            if (isNaN(age)) {
+              alert('Age must be a number.');
+              return;
+            }
+            alert('Registration successful. Thank you for taking the survey.');
+            window.location.href = '/FEEProjects.html';
+          }
+           var form = document.querySelector('form');
+          form.addEventListener('submit', function (event) {
+            event.preventDefault(); 
+            check_age(); 
+          }); 
+          
+
+
+  // Additional JavaScript features
+  
+
+    </script>   
+  </body>
+</html>
